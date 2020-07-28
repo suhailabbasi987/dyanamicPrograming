@@ -16,7 +16,7 @@ public class dpQues{
     
   }
   
-  public static int countBoardPath(int src,int dest,int [] qb)
+  public static int countBoardPathMemorization(int src,int dest,int [] qb)
   {
     if(src == dest)
     {
@@ -37,13 +37,13 @@ public class dpQues{
     for(int dice=1;dice<=6;dice++)
     {
       inter=src+dice;
-      ansCatch+=countBoardPath(inter,dest,qb);
+      ansCatch+=countBoardPathMemorization(inter,dest,qb);
     }
     qb[src]=ansCatch;
 return ansCatch;
   }
   
-  
+
   public static int fibonaccilMemorization(int n, int [] questionBank)
   {
     
@@ -61,7 +61,25 @@ return ansCatch;
     questionBank [n]=sumCatcher;
     return sumCatcher;
     
+    }
+  
+  public static int fibonacciTabulated(int n)
+  {
+    
+    int [] f=new int [n+1];
+    f[0]=0;  // fibonacci of 0;
+    f[1]=1;  // fibonacci of 1;
+    
+    for(int x=2;x<=n;x++)
+    {
+      f[x]=f[x-1]+f[x-2];
+    }
+    
+    return f[n];
+    
     
   }
+  
+  
 
 }
