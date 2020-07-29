@@ -9,11 +9,25 @@ public class dpQues{
     long end=System.currentTimeMillis();
     System.out.print(end-start);
   */ 
+  /*
+  
     long start=System.currentTimeMillis();
     long end=System.currentTimeMillis();
     countBoardPathMemorization(0,n,new int [n+1]);
     System.out.print(end-start);
+  */   
+  /*
+    long start=System.currentTimeMillis();
+    long end=System.currentTimeMillis();
+    fibonacciTabulated(n);
+    System.out.print(end-start);
+  */
     
+    long start=System.currentTimeMillis();
+    long end=System.currentTimeMillis();
+    countBoardPathTabulated(n);
+    System.out.print(end-start);
+   / 
   }
   
   public static int countBoardPathMemorization(int src,int dest,int [] qb)
@@ -65,7 +79,6 @@ return ansCatch;
   
   public static int fibonacciTabulated(int n)
   {
-    
     int [] f=new int [n+1];
     f[0]=0;  // fibonacci of 0;
     f[1]=1;  // fibonacci of 1;
@@ -76,9 +89,10 @@ return ansCatch;
     }
     
     return f[n];
-    
-    
   }
+  
+  public static countBoardPathTabulated(int dest)
+  {}
   
   
 
